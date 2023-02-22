@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.shop-bg{
+    background-color: #d1d1d1;
+    padding: 250px;
+}
+
+.shop-container{
+   background-color: #d1d1d1;
+   display:flex;
+   width:90%;
+   margin:auto;
+}
+
+.shop-item{
+    width:33%;
+    margin-bottom: 100px;
+    padding: 55px
+}
+.shop-item img{
+    width:100%;
+    display:block;
+}
+
+.product-container{
+    width:80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.product-container div {
+    float:left;
+    width:25%;
+}
+
+
+.nav-container{
+    display:flex;
+    height:50px;
+    /* vw 브라우저 폭에 비례 // vh 브라우저 높이에 비례 // rem 기본 폰트 사이즈에 비례 */
+    font-family: 'S-CoreDream-3Light';
+    align-items: center;
+    padding: 3px;
+    background-color: rgb(255, 238, 212);
+}
+
+.nav-item{
+    margin-right: 20px;
+}
+
+div,input,textarea{
+    box-sizing: border-box;
+}
+.main-bg{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/shoes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    /* filter:brightness(30%) */
+    /* ../는 상위로 이동하라는뜻 */
+    /* size:cover 알아서 배경 꽉 채워라 */
+    /* size:contain 여백이 남아도 좋으니까 배경이 짤리면 안된다. */
+    /* position: center 가운데부터 채워라,left 왼쪽부터채워라 */
+    /* attachment:스크롤시 배경 위치 조정 가능 */
+    /* filter: 보정가능,안에 글씨있으면 글씨도 필터가 입혀진다. */
+    /* background-image: linear-gradient() 배경에 검은색 틴트주기 */
+    /* 배경은 꽉차지않으면 반복된다.반복되게끔 하기 싫으면 no-repeat */
+}
+
+.main-title{
+    color: white;
+    font-size: 40px;
+    font-family: 'S-CoreDream-3Light';
+    text-align: center;
+    /* div가 겹치면 마진이 합쳐진다 - (위로,아래로 겹쳐지면 안된다.)margin collapse 싫으면 테두리 안붙게 */
+}
+
+.main-content{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'S-CoreDream-3Light';
+}
+
+
+.main-btn{
+    position: absolute;
+    /* 포지션부여시 좌표 이동가능 static은 좌표이동X , fixed는 현재 화면 기준, absolute 내 부모 태그중 relative 가진 부모 기준*/
+    /* absolute 준요소 가운데 정렬 left,right 0 margin auto width:적절하게 */
+    /* 좌표를 z-index로 부여하면 앞으로 보내기 뒤로보내기를 부여해준다. */
+    left:0;
+    right:0;
+    margin:auto;
+    width: 150px;
+    font-family: 'S-CoreDream-3Light';
+    font-size:14px;
+    border: 3px solid rgb(255, 245, 211);
+    border-radius: 5px;
+    /* border-radius: 테두리둥글게 */
+    /* border: 테두리, 픽셀,종류,색깔 지정가능 */
+    /* padding: 상하좌우 안쪽여백 */
+    background-color: rgb(248, 241, 203);
+}
+
+.main-box{
+    max-width: 320px;
+    /* 부모의 맥스사이즈 (반응형 웹 사이트 만들때 유용하다) */
+    /* width %일경우에 max-width로 함께 쓰는것도 좋다. */
+    height: 190px;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:350px;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'S-CoreDream-3Light';
+    background-color: beige;
+    margin:auto;
+}
+
+.overlay{
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: all 1s;
+}
+.overlay:hover{
+    opacity: 0.5;
+}
+
+
+@media screen and (max-width: 1200px){
+    /* 1200픽셀 이하에서 적용된다. 태블릿 */
+    .main-title{
+        font-size: 20px;
+    }
+    .product-container div{
+        width: 50%;
+    }
+    .product-container{
+        max-width: 600px;
+    }
+    .shop-container{
+        background-color: #d1d1d1;
+        display:flex;
+        width:85%;
+        margin-left:20px;
+     }
+     .shop-item{
+        width:30%;
+        margin-bottom: 10px;
+        padding: 55px
+    }
+     .shop-item img{
+        margin:auto;
+        width:130%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* 1200픽셀 이하에서 적용된다. 모바일  */
+    .main-title{
+        font-size: 18px;
+    }
+    .product-container{
+        max-width: 600px;
+    }
+    .shop-container{
+        background-color: #d1d1d1;
+        display:flex;
+        width:100%;
+     }
+     .shop-item{
+        width:33%;
+        margin-bottom: auto;
+        padding: 55px
+    }
+     .shop-item img{
+        margin:auto;
+        width:120%;
+    }
+}
+
+
+/* 
+.flex-container{
+    display: flex;
+    /* justify-content: center; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* 가로로 배치해주는 display:flex  */
+    /* 가운데 정렬 justify-content: center */
+    /* flex-direction: column 세로로 배치된다. 반응형 웹에 유용 */
+    /* flex-drirection: row는 가로로 배치된다 */
+    /* flex-wrap: wrap; 크면 밑으로 보낸다 */
+    /* align-items: center: 상하정렬 }*/
+
+
